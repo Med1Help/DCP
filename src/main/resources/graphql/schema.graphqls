@@ -1,0 +1,29 @@
+type Query{
+    allCars:[CarDto],
+    carById(id:Float):CarDto
+}
+type Mutation {
+    addCar(car: CarInput): Boolean
+}
+type CarDto {
+     name:String,
+     brand:String,
+     color:String,
+     fuelCap:Float,
+     regNumber:String,
+     yearModel:String,
+     length:Float,
+     width:Float,
+     location:String
+}
+input CarInput{
+    name:String,
+    brand:String,
+    color:String,
+    fuelCap:Float,
+    regNumber:String,
+    yearModel:String,
+    length:Float,
+    width:Float,
+    location:String
+}
