@@ -1,0 +1,25 @@
+syntax="proto3";
+option java_package="mohammed.ma.DCP.stub";
+service CarService{
+    rpc allCars(GetAllCars) returns (CarsResponse);
+    rpc carById(CarByIdReq) returns (Car);
+}
+
+message GetAllCars{}
+message CarsResponse{
+    repeated  Car cars = 1;
+}
+message Car{
+    string name = 1;
+    string brand = 2;
+    string color = 3;
+    float fuel_cap = 4;
+    string reg_number = 5;
+    string year_model = 6;
+    float length = 7;
+    float width = 8;
+    string location = 9;
+}
+message CarByIdReq{
+    int64 car_id=1;
+}
